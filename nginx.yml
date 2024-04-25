@@ -1,0 +1,13 @@
+- name: to install nginx and run nginx server
+  hosts: web
+  become: yes #root user 
+  tasks: #collections/modules
+  - name: install nginx
+    ansible.builtin.dnf:
+     name: nginx
+     state: latest
+  - name: run the nginx service
+    ansible.builtin.service:
+     name: nginx
+     state: started
+     enabled: yes 
