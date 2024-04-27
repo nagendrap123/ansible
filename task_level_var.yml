@@ -5,7 +5,7 @@
    trainer: nagenrda
    city: nellore
   tasks:
-  - name: #task level variables 
+  - name: task level variables overriding
     vars:
      course: terraform
     ansible.builtin.debug:
