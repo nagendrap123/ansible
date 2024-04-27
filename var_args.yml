@@ -1,0 +1,6 @@
+- name: variable number of arguments
+  hosts: all
+  tasks:
+  - name: variable number of arguments
+    ansible.builtin.debug:
+    msg: "hello {{name}} have a {{}}"
