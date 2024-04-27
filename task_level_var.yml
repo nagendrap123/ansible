@@ -1,0 +1,15 @@
+- name: top level variable 
+  hosts: localhost
+  vars:
+   course: Devops
+   trainer: nagenrda
+   city: nellore
+  tasks:
+  - name: #task level variables 
+    vars:
+     course: terraform
+    ansible.builtin.debug:
+     msg: "Hi my name is {{trainer}} from {{city}} i will teach the {{course}}"
+  - name: to run the top level inherritance
+    ansible.builtin.debug:
+     msg: "Hi my name is {{trainer}} from {{city}} i will teach the {{course}}"
