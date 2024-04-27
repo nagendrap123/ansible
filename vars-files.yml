@@ -1,6 +1,6 @@
 - name: top level variable 
   hosts: localhost
-  vars-files:
+  vars_files:
   - vars.yml
   tasks:
   - name: to run the top level variables 
