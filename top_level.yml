@@ -1,0 +1,10 @@
+- name: top level variable 
+  hosts: localhost
+  vars:
+   course: Devops
+   trainer: nagenrda
+   city: nellore
+  tasks:
+  ansible.builtin.debug:
+   msg: "Hi my name is {{trainer}} from {{city}} i will teach the {{course:}}"
+    
