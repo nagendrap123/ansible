@@ -1,6 +1,6 @@
 ---
 - name: inventory variables
-  hosts: webserver1
+  hosts: all
   tasks:
     - name: inventory variables using
       ansible.builtin.debug:
