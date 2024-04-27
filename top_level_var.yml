@@ -5,6 +5,7 @@
    trainer: nagenrda
    city: nellore
   tasks:
-  ansible.builtin.debug:
-   msg: "Hi my name is {{trainer}} from {{city}} i will teach the {{course:}}"
+  - name: to run the top level variables 
+    ansible.builtin.debug:
+     msg: "Hi my name is {{trainer}} from {{city}} i will teach the {{course:}}"
     
