@@ -1,9 +1,9 @@
-- name: top level variable 
+- name: variables from files
   hosts: localhost
   vars_files:
   - vars.yml
   tasks:
-  - name: to run the top level variables 
+  - name: to run the variables from files 
     ansible.builtin.debug:
      msg: "Hi my name is {{trainer}} from {{city}} i will teach the {{course}}"
     
