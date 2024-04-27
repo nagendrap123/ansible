@@ -4,4 +4,4 @@
   tasks:
     - name: inventory variables using
       ansible.builtin.debug:
-        msg: "hellow  webserver1 of the ennvrionment {{env}}"
+        msg: "hellow  webserver1 of the ennvrionment {{env}} and host ip is {{hostip}}"
