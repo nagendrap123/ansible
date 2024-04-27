@@ -1,6 +1,6 @@
 - name: inventory variables
-  hosts: webserver1
+  hosts: all
   tasks:
   - name: inventory variables using 
     ansible.builtin.debug:
-     msg: "hellow hostip {{hostip}} of webserver1 of the ennvrionment {{ennvrionment}}"
+     msg: "hellow hostip {{hostip}} of webserver1 of the ennvrionment {{envrionment}}"
