@@ -1,6 +1,7 @@
 - name: data types in ansible
   hosts: all
   vars:
+   course: "DevOps with AWS"
    tools: # list
    - linux
    - ansible
@@ -13,4 +14,4 @@
   tasks:
   - name: taks of variables
     ansible.builtin.debug:
-     msg: the course with tools:{{tools}} have an experiance:{{experiance}} done realtime project:{{realtime project}}
+     msg: "the course:{{course}} with tools:{{tools}} have an experiance:{{experiance}} done realtime project:{{realtime project}}"
