@@ -3,5 +3,6 @@
   vars:
     email_list: "john@example.com, jane@example.com, bob@example.com"
   tasks:
-    - debug:
+    - name: the replace the word
+      ansible.builtin.debug:
         msg: "{{ email_list | regex_replace(',', ';') }}"
