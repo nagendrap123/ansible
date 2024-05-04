@@ -1,11 +1,7 @@
 - name: converting dict into items
   hosts: localhost 
   vars:
-   my_dict: 
-   - linux
-   - shell
-   - ansible
-   - mysql
+   my_dict: [linux,shell]
   tasks:
   - name: converting dict into items
     ansible.builtin.debug:
