@@ -2,8 +2,9 @@
   hosts: localhost 
   vars:
    my_dict: 
-    course: ansible
-    trainer: nagendrap
+    -linux
+    -shell
+    -ansible
   tasks:
   - name: converting dict into items
     ansible.builtin.debug:
