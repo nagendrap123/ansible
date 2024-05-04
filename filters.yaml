@@ -1,5 +1,5 @@
 - name: replace the word
-- hosts: localhost
+- hosts: all
   vars:
     email_list: "john@example.com, jane@example.com, bob@example.com"
   tasks:
