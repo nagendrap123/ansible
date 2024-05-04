@@ -4,7 +4,7 @@
   - name: command execution to check ignore errors
     ansible.builtin.command: id expense 
     register: user
-    ignore_errors: true
+    
   tasks: 
    - name: to print the command output using register
      ansible.builtin.debug:
