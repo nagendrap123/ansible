@@ -1,0 +1,6 @@
+- name: default
+  hosts: all
+  tasks:
+  - name: default value when the variable not defined 
+    ansible.builtin.debug:
+     msg: "the course is {{course | default ('ansible')}} "
