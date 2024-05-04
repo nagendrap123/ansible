@@ -1,8 +1,8 @@
-- name: replace the word
-  hosts: webserver1
+- name: Convert date string to datetime object
+  hosts: localhost
   vars:
-    email_list: "john@example.com, jane@example.com, bob@example.com"
+    date_string: "2024-05-04 15:30:00"
   tasks:
-    - name: the replace the word
-      ansible.builtin.debug:
-        msg: "{{ email_list | regex_replace(',', ';') }}"
+    - name: Convert date string to datetime object
+      debug:
+        msg: "{{ date_string | to_datetime }}"
