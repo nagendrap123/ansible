@@ -1,11 +1,8 @@
-- name: default
-  hosts: all
+- name: remove duplicates
+  hosts: localhost
   vars:
-   greetings: "Hello,Everyone good morning"
+   number: [1,2,3,3,5,5,5,6,7]
   tasks:
-  - name: default value when the variable not defined 
-    ansible.builtin.debug:
-     msg: "the course is {{course | default ('ansible')}} "
-  - name: chnaging to capitalize the first string
-    ansible.builtin.debug:
-     msg: "{{greetings | capitalize}}"
+   - name: remove the duplicates
+     ansible.builtin.debug:
+      msg: "{{number | unique}}"
