@@ -1,15 +1,7 @@
----
-- name: converting dict into items
-  hosts: localhost
+- name: replace the word
+- hosts: localhost
   vars:
-    my_list_of_items:
-      - key: name
-        value: John
-      - key: age
-        value: 30
-      - key: city
-        value: New York
+    email_list: "john@example.com, jane@example.com, bob@example.com"
   tasks:
-    - name: converting dict into items
-      ansible.builtin.debug:
-        msg: "{{my_list_of_items | items2dict}}"
+    - debug:
+        msg: "{{ email_list | regex_replace(',', ';') }}"
