@@ -8,4 +8,4 @@
   tasks:
   - name: converting dict into items
     ansible.builtin.debug:
-     msg: "{{my_dict | dict2items}}"
+     msg: "{{my_dict | items2dict}}"
