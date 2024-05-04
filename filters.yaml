@@ -8,4 +8,4 @@
      msg: "the course is {{course | default ('ansible')}} "
   - name: chnaging to uppercase
     ansible.builtin.debug:
-     msg: "{{greetings | upper}}"
+     msg: "{{greetings | lower}}"
