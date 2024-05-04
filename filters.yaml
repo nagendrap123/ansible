@@ -5,4 +5,4 @@
   tasks:
    - name: reverse the numbers
      ansible.builtin.debug:
-      msg: "{{number | avg}}"
+      msg: "{{number | sort}}"
