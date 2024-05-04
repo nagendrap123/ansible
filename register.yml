@@ -3,8 +3,11 @@
   tasks:
   - name: command execution to check ignore errors
     ansible.builtin.command: id expense 
-    register: user
-  tasks: 
-   - name: to print the command output using register
+    register: user 
+    ignore_errors: true
+  - name: to print the command output using register
      ansible.builtin.debug:
-      msg: print output of user {{user}}
+      msg: "print output of user {{user}}"
+  - name: say hello
+    ansible.builtin.debug:
+     msg: "hi hello"
