@@ -1,14 +1,15 @@
+---
 - name: converting dict into items
-  hosts: localhost 
+  hosts: localhost
   vars:
-   my_list_of_items:
-  - key: "name"
-    value: "John"
-  - key: "age"
-    value: 30
-  - key: "city"
-    value: "New York"
+    my_list_of_items:
+      - key: name
+        value: John
+      - key: age
+        value: 30
+      - key: city
+        value: New York
   tasks:
-  - name: converting dict into items
-    ansible.builtin.debug:
-     msg: "{{my_list_of_items | dict2items}}"
+    - name: converting dict into items
+      ansible.builtin.debug:
+        msg: "{{my_list_of_items | items2dict}}"
