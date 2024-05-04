@@ -2,9 +2,10 @@
   hosts: localhost 
   vars:
    my_dict: 
-    -linux
-    -shell
-    -ansible
+   - linux
+   - shell
+   - ansible
+   - mysql
   tasks:
   - name: converting dict into items
     ansible.builtin.debug:
