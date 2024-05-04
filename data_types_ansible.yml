@@ -2,15 +2,15 @@
   hosts: all
   vars:
    course: "DevOps with AWS"
-   tools: #list
+   tools: # list
    - linux
    - ansible
    - shell
-   experiance: #map or dictionary 
+   experiance: # map or dictionary 
      experiance: 3
      AWS: 2
      docker: 1
-   realtime project: true #boolean
+   realtime project: true # boolean
   tasks:
   - name: taks of variables
     ansible.builtin.debug:
