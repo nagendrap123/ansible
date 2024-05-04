@@ -1,0 +1,18 @@
+---
+- name: register
+  hosts: all
+  become: yes
+  tasks:
+    - name: command execution to check ignore errors
+      ansible.builtin.command: id expense
+      register: USER
+      ignore_errors: true
+    - name: to print the command output using register
+      ansible.builtin.debug:
+        msg: print output of user {{USER}}
+    - name: to create expense user
+      ansible.builtin.command: useradd expense
+      when: USER.rc != 0 #return code not equal to zero then create user
+    - name: say hello
+      ansible.builtin.debug:
+        msg: hi hello
