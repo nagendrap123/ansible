@@ -1,8 +1,10 @@
-- name: remove duplicates
-  hosts: localhost
+- name: converting dict into items
+  hosts: localhost 
   vars:
-   number: [1,2,3,3,5,5,5,6,7]
+   my_dict: 
+    course: ansible
+    trainer: nagendrap
   tasks:
-   - name: reverse the numbers
-     ansible.builtin.debug:
-      msg: "{{number | sort}}"
+  - name: converting dict into items
+    ansible.builtin.debug:
+     msg: "{{my_dict | dict2items}}"
