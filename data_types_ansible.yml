@@ -1,7 +1,7 @@
 - name: data types in ansible
   hosts: all
   vars:
-   course: DevOps with AWS
+   course: "DevOps with AWS"
    tools: #list
    - linux
    - ansible
