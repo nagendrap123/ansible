@@ -1,0 +1,10 @@
+- name: ignore errors 
+  hosts: all
+  tasks:
+  - name: command execution to check ignore errors
+    ansible.builtin.command: id expense 
+    ignore_errors: true
+  tasks:
+  - name: say hello
+    ansible.builtin.debug:
+     msg: "hi hello"
