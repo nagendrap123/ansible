@@ -1,11 +1,11 @@
 - name: default
   hosts: all
   vars:
-   greetings: "Hello,Everyone"
+   greetings: "Hello,Everyone good morning"
   tasks:
   - name: default value when the variable not defined 
     ansible.builtin.debug:
      msg: "the course is {{course | default ('ansible')}} "
-  - name: chnaging to uppercase
+  - name: chnaging to capitalize the first string
     ansible.builtin.debug:
-     msg: "{{greetings | lower}}"
+     msg: "{{greetings | capitalize}}"
