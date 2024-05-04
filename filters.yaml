@@ -1,7 +1,7 @@
 - name: replace the word
-- hosts: all
+- hosts: webserver1
   vars:
-    email_list: [john@example.com, jane@example.com, bob@example.com]
+    email_list: "john@example.com, jane@example.com, bob@example.com"
   tasks:
     - name: the replace the word
       ansible.builtin.debug:
