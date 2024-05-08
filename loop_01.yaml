@@ -6,9 +6,8 @@
     ansible.builtin.dnf:
      name: "{{ item }}"
      state: latest
-     enable: yes 
     loop:
     - mysql
     - nginx
     - wget 
-    
+
