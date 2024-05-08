@@ -1,0 +1,9 @@
+- name: with_dict Loop Example
+  hosts: localhost
+  tasks:
+    - name: Print user details
+      ansible.builtin.debug:
+        msg: "User {{ item.key }} is {{ item.value }}"
+      with_dict:
+        alice: 30
+        bob: 25
