@@ -5,7 +5,6 @@
   - name: install the packages by using the loops
     ansible.builtin.debug:
      msg: "hello installed packages are {{ item }}"
-     state: latest
     loop:
     - mysql
     - nginx
