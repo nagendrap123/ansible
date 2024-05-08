@@ -1,8 +1,11 @@
-- name: Convert date string to datetime object
+- name: converting dict into items
   hosts: localhost
   vars:
-    date_string: "2024-05-04 15:30:00"
+    my_list_of_items:
+       - {'key': 'name','value':'john'}
+       - {'key': 'age','value':'30'}
+       - {'key': 'city','value':'New York'}
   tasks:
-    - name: Convert date string to datetime object
-      debug:
-        msg: "{{ date_string | to_datetime }}"
+    - name: converting dict into items
+      ansible.builtin.debug:
+        msg: "{{my_list_of_items | items2dict}}"
