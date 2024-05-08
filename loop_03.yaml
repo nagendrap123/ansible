@@ -1,0 +1,14 @@
+- name: by using loops install the packages 
+  hosts: all 
+  become: yes 
+  tasks:
+  - name: install the packages by using the loops
+    ansible.builtin.dnf:
+     name: "{{ item }}"
+    loop:
+    - { name: 'mysql', state: 'latest'} # this is called item
+    - { name: 'nginx', state: 'absent'}
+    - { name: 'wget', state: 'absent'}
+    
+     
+
