@@ -1,0 +1,10 @@
+- name: with_items Loop Example
+  hosts: localhost
+  tasks:
+    - name: Print numbers
+      ansible.builtin.debug:
+        msg: "Number: {{ item }}"
+      with_items:
+        - 1
+        - 2
+        - 3
