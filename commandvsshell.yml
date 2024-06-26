@@ -2,6 +2,9 @@
   hosts: localhost
   tasks: 
   - name: command module
-    ansible.builtin.module: "echo 'hi,this is command module'>/tmp/module.txt"
+    ansible.builtin.command: "echo 'hi,this is command module'>/tmp/module.txt"
   - name: command module
     ansible.builtin.shell: "echo 'hi,this is shell module'>/tmp/shell.txt"  
+ # simple commands without the need of shell variables, envrironment and features like redirections, pipes, & go for command module.
+ # If we need to run complex commands or scripts go for shell module.
+ # Whatever works in command module, it will work in shell module, but vice versa is not true.   
